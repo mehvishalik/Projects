@@ -20,7 +20,7 @@ button.forEach((btn) => {
     btn.disabled = true;
     count++;
     checkWinner();
-    countOfChance();
+     countOfChance();
   });
 });
 
