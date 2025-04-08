@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
         taskList.removeChild(li);
       });
   
-      buttonDiv.appendChild(deleteBtn);
-      li.appendChild(taskSpan);
-      li.appendChild(buttonDiv);
-      taskList.appendChild(li);
+      buttonDiv.append(deleteBtn);
+      li.append(taskSpan);
+      li.append(buttonDiv);
+      taskList.append(li);
   
       input.value = "";
     }
