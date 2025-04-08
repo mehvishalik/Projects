@@ -35,33 +35,40 @@ body {
 }
 .header {
   font-size: 80px;
-  margin-top: -2000px;
-  margin-right: -2000px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   color: white;
 }
-h2 {
-  margin-left: 800px;
-}
 
-#btn1 {
-  
-  border: 20px solid rgb(255, 0, 0) ;
+
+.red {
+  background-color: rgb(255, 0, 0);
+  border: 20px solid rgb(255, 0, 0);
   box-shadow: 3px 3px 10px 10px white;
 }
-#btn2 {
-
+.green {
+  background-color: rgb(0, 255, 0);
   border: 20px solid rgb(0, 255, 0);
   box-shadow: 3px 3px 10px 10px white;
 }
-#btn3 {
-  
+.blue {
+  background-color: rgb(0, 0, 255);
   border: 20px solid rgb(0, 0, 255);
   box-shadow: 3px 3px 10px 10px white;
 }
-#btn4 {
-  border: 20px solid rgb(255, 255, 0) ;
+.yellow {
+  background-color: rgb(255, 255, 0);
+  border: 20px solid rgb(255, 255, 0);
   box-shadow: 3px 3px 10px 10px white;
 }
-.bg{
-    background-color:rgb(255, 0, 0)  ;
+.active {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 20px 20px black;
+  filter: brightness(1.5);
+  transition: all 0.2s ease;
 }
+

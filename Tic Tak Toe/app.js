@@ -23,20 +23,24 @@ button.forEach((btn) => {
      countOfChance();
   });
 });
-
+let gameOver = false;
 let checkWinner = () => {
   for (let patterns of winPatterns) {
-    pos1 = patterns[0];
-    pos2 = patterns[1];
-    pos3 = patterns[2];
+  let  pos1 = patterns[0];
+   let  pos2 = patterns[1];
+   let  pos3 = patterns[2];
     if (
       button[pos1].innerText !== "" &&
       button[pos1].innerText === button[pos2].innerText &&
       button[pos2].innerText === button[pos3].innerText
     ) {
       h1.innerText = `Player ${button[pos1].innerText} wins!`;
-
-      reset();
+      gameOver = true;
+      count = 0;
+      button.forEach((btn) => btn.disabled = true);
+      setTimeout(() => {
+        reset()
+      }, 1500);
     }
   }
 };
@@ -45,6 +49,8 @@ let reset = () => {
     btn.disabled = false;
     btn.innerText = "";
     resetBtn.innerText = "Play Again";
+    gameOver = false;
+    count = 0;
   });
 };
 resetBtn.addEventListener("click", () => {
@@ -53,9 +59,12 @@ resetBtn.addEventListener("click", () => {
   h1.innerText = "TIC TAC TOE";
 });
 let countOfChance = ()=>{
-if (count===9) {
+if (count===9 && !gameOver) {
     h1.innerText = "It's a draw!";
-    reset();
+   setTimeout(() => {
+    reset()
+   }, 1500);
+    count = 0;
 } else{
    return ;
     

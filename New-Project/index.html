@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="outerContainer">
-      <div class="header">
-        <h1>Press Any Key To Start A Game</h1>
-        <h2>Level: 1</h2>
-      </div>
-      <div class="container">
-        <button class="btn" id="btn1">1</button><button class="btn" id="btn2">2</button
-        ><button class="btn" id="btn3">3</button> ><button class="btn" id="btn4">4</button>
-      </div>
+</head>
+<body>
+    <div class="outer">
+        <div class="inputDiv">
+            <label for="input1">Product Name:</label>
+        <input type="text" id="product" name="input1" class="input" />
+        <label for="input2"> Product Price:</label>
+        <input type="number" id="price" name="input2" class="input"/>
+        <button class="btn" id="adding">Add Product</button>
+        </div>
+        <div class="ulDiv">
+        <ul id="ul" class="list">
+
+        </ul>
+        </div>
+        <div class="buttonDiv">
+            <button class="btn" id="button"> Refersh </button>
+        </div>
     </div>
     <script src="./app.js"></script>
-  </body>
+</body>
 </html>
